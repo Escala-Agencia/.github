@@ -1,7 +1,6 @@
 name: Épica
 description: Objetivo grande que se divide en sub-issues.
 type: Épica
-projects: ["Escala-Agencia/1"]
 title: "[Épica] "
 body:
   - type: textarea

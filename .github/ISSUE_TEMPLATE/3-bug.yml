@@ -1,7 +1,6 @@
 name: Bug
 description: Algo no funciona como debería.
 type: Bug
-projects: ["Escala-Agencia/1"]
 body:
   - type: textarea
     id: que-pasa
@@ -20,8 +19,7 @@ body:
     id: pasos
     attributes:
       label: Pasos para reproducir
-      value: |
-        1. 
+      placeholder: "1. …"
     validations:
       required: true
   - type: input

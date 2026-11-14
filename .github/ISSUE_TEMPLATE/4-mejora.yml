@@ -1,7 +1,6 @@
 name: Mejora
 description: Capacidad nueva o mejora de una existente.
 type: Mejora
-projects: ["Escala-Agencia/1"]
 body:
   - type: textarea
     id: problema

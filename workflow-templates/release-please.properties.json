@@ -1,0 +1,6 @@
+{
+  "name": "release-please",
+  "description": "Versión, changelog y release desde los commits de la rama principal.",
+  "iconName": "octicon tag",
+  "categories": ["Automation"]
+}

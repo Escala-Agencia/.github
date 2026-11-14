@@ -1,0 +1,6 @@
+{
+  "name": "CI de Python (uv)",
+  "description": "Lint y tests con uv si hay pyproject.toml; si no, solo comprueba marcas de conflicto.",
+  "iconName": "octicon check-circle",
+  "categories": ["Python", "Continuous integration"]
+}

@@ -9,4 +9,4 @@ permissions:
 
 jobs:
   pr-titulo:
-    uses: mariomina/.github/.github/workflows/pr-titulo.yml@main
+    uses: mariomina/.github/.github/workflows/pr-titulo.yml@v1

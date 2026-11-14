@@ -1,0 +1,11 @@
+name: agents-md
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  agents-md:
+    uses: mariomina/.github/.github/workflows/agents-md.yml@v1

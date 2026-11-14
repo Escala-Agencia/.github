@@ -1,6 +1,8 @@
 {
   "name": "release-please",
-  "description": "Versión, changelog y release desde los commits de la rama principal.",
+  "description": "Versión, changelog y release desde los commits de la rama principal. Requiere release-please-config.json y .release-please-manifest.json.",
   "iconName": "octicon tag",
-  "categories": ["Automation"]
+  "categories": [
+    "Automation"
+  ]
 }

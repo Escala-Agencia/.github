@@ -10,4 +10,4 @@ permissions:
 
 jobs:
   ci:
-    uses: mariomina/.github/.github/workflows/ci-python.yml@main
+    uses: mariomina/.github/.github/workflows/ci-python.yml@v1

@@ -1,8 +1,0 @@
-{
-  "name": "AGENTS.md (filtro global)",
-  "description": "Comprueba que el AGENTS.md existe, declara tipo-repo y no exceptúa reglas globales.",
-  "iconName": "octicon checklist",
-  "categories": [
-    "Automation"
-  ]
-}

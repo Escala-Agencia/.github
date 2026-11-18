@@ -1,0 +1,26 @@
+name: pr
+
+# Checks de PR en un solo job (mariomina/mario-home#134): GitHub redondea cada job a 1 min.
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+# Solo un push nuevo (synchronize: cambia el head) cancela el CI en curso; edited, opened y reopened esperan.
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: ${{ github.event.action == 'synchronize' }}
+
+jobs:
+  pr:
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Título, AGENTS.md y CI de Python; cada paso corre aunque falle el anterior
+      - uses: mariomina/.github/acciones/pr@v1

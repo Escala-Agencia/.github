@@ -1,6 +1,0 @@
-{
-  "name": "Título de PR convencional",
-  "description": "Comprueba que el título de la PR sigue Conventional Commits.",
-  "iconName": "octicon git-pull-request",
-  "categories": ["Automation"]
-}

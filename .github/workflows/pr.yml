@@ -1,0 +1,15 @@
+name: pr
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-titulo:
+    uses: mariomina/.github/.github/workflows/pr-titulo.yml@v1
+  ci:
+    uses: mariomina/.github/.github/workflows/ci-python.yml@v1

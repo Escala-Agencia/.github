@@ -1,0 +1,6 @@
+{
+  "name": "Checks de PR (un solo job)",
+  "description": "Título convencional, AGENTS.md (filtro global) y CI de Python con uv en un solo job, con la acción mariomina/.github/acciones/pr@v1.",
+  "iconName": "octicon check-circle",
+  "categories": ["Automation", "Continuous integration"]
+}

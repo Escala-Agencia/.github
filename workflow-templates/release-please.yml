@@ -1,10 +1,14 @@
-# Versiones y changelog en todo repo (mariomina/2-cerebro#276). Necesita release-please-config.json y
-# .release-please-manifest.json en la raíz (copiarlos de Escala-Agencia/plantilla-cliente).
+# Versiones y changelog en todo repo (mariomina/mario-2-cerebro#276). Necesita release-please-config.json y
+# .release-please-manifest.json en la raíz (copiarlos de Escala-Agencia/agencia-plantilla-cliente) y el secreto
+# APP_PRIVATE_KEY: sin él, la PR de versión se crea sin CI y no se fusiona sola (mariomina/.github#28).
 name: release-please
 
+# Una vez al día (mariomina/mario-home#134, P4): una PR de versión agrupa las fusiones del día y la release
+# sale en la ejecución siguiente a su fusión. `workflow_dispatch` la adelanta.
 on:
-  push:
-    branches: [$default-branch]
+  schedule:
+    - cron: "35 6 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,5 +17,6 @@ permissions:
 
 jobs:
   release-please:
-    if: ${{ !github.event.repository.is_template }}
     uses: mariomina/.github/.github/workflows/release-please.yml@v1
+    secrets:
+      APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}

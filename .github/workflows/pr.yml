@@ -22,7 +22,5 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      # Título y CI de Python; cada paso corre aunque falle el anterior
+      # Título, AGENTS.md y CI de Python; cada paso corre aunque falle el anterior
       - uses: mariomina/.github/acciones/pr@v1
-        with:
-          agents-md: "false"   # este repo no tiene AGENTS.md
